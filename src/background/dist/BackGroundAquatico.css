@@ -1,0 +1,62 @@
+@import url('https://fonts.cdnfonts.com/css/aquatico');
+.rectangle {
+    width: 48rem;
+    height: 33rem;
+    
+    background:rgb(0,0,205,0.1);
+    opacity: 1.0;
+}
+.start{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: aquatico;
+
+
+}
+.gifContainer {
+    width: 80px;
+    height: 60px;
+    border: 1px solid black;
+    /* position: absolute; */
+    margin-left: 50%;
+    margin-top: 55px;
+     
+     transform: translate(-50%);
+    
+
+  }
+
+.TituloDaPergunta{
+    margin-top: 20px;
+    /* margin-right:30%; */
+  margin-left: 10px;
+  font-family: aquatico;
+  font-size: 22px;
+}
+
+.container{
+    display: grid;
+    margin-top: 36px;
+    margin-left:10px;
+    gap:40px ;
+    font-size: 20px;
+    font-family: aquatico;
+    
+  }
+  .butonOptions
+  {
+      background: #76c764;
+      height: 30px;
+      width: 98%;
+      border: none;
+      border-radius: 5px;
+  }
+  .butonOptions:focus
+  {
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+      background: #69e673;
+      
+  } 
