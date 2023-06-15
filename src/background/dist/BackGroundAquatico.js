@@ -2,14 +2,36 @@ import React, { useState } from 'react'
 import './style.css'
 import './BackGroundAquatico.css'
 import { ObjectQuiz } from '../../objectQuiz/ObjectQuiz'
+import { useNavigate } from 'react-router-dom';
 const Background = () => {
   const [perguntaQuestNumber,setPerguntaQuestNumber] = useState(0)
+  // let totalDeQuests = 0
+  // totalDeQuests = ObjectQuiz.length
+  const [totalDeQuests, setTotalQuests ] = useState(ObjectQuiz.length)
+  const [numbercorrectQuests , setNumberCorrectQuests] = useState(0)
   // const [nextQuestButton,setNextQuestButton] = useState()
+  const navegar = useNavigate()
+  const EndPage = () => {
+    navegar('/')
+  }
   const nextQuestButtonFunction = () => {
-      setPerguntaQuestNumber(perguntaQuestNumber + 1 )
-      if(perguntaQuestNumber.length< 4 ){
-        alert('tentou')
-      }
+
+    if(nextQuestButtonFunction){
+      setPerguntaQuestNumber( perguntaQuestNumber +1)
+      console.log(perguntaQuestNumber)
+      // setTotalQuests( totalDeQuests - 1 )
+    }
+    if(perguntaQuestNumber === totalDeQuests){
+      EndPage()
+      console.log('acabou')
+    }
+
+    if(ObjectQuiz.iscorrect == true){
+      console.log('oi')
+      setNumberCorrectQuests(numbercorrectQuests +1)
+      console.log(numbercorrectQuests)
+    }
+    
   }
   return (
     <div className="wrapper">
@@ -26,7 +48,7 @@ const Background = () => {
  
      {ObjectQuiz[perguntaQuestNumber].options.map((opcoes,key)=> (
       <p key = {key}>
-      {console.log(opcoes)}
+      {/* {console.log(opcoes)} */}
       <button className='butonOptions'>{opcoes.option}</button>
       
     </p> 

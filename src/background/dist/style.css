@@ -1,3 +1,5 @@
+
+@import url('https://fonts.cdnfonts.com/css/aquatico');
 * {
   margin: 0;
   padding: 0;
@@ -125,4 +127,7 @@ div .dot {
 }
 
 
+.Quiz{
+  font-family: aquatico;
 
+}
